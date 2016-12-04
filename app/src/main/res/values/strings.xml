@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hellow_world_static_fragment">Hello world! static fragment!</string>
+    <string name="action_settings">Settings</string>
+    <string name="static_load_demo">Load fragments statically</string>
+</resources>
