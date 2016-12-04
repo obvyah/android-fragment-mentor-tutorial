@@ -1,17 +1,26 @@
-package com.demofragment.demoapp;
+package com.demofragment.demoapp.dynamicload;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.demofragment.demoapp.R;
+
+public class DynamicLoadActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dynamic_load);
 
+        // Only if this is a new activity, so fragments don't exist yet.
+        if (savedInstanceState == null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flContainer, new DynamicLoadFragment());
+            ft.commit();
+        }
     }
 
 
