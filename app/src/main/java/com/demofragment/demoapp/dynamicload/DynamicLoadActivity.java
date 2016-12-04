@@ -3,12 +3,15 @@ package com.demofragment.demoapp.dynamicload;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.demofragment.demoapp.R;
 
 public class DynamicLoadActivity extends FragmentActivity {
+
+    public final String LOG_TAG_LIFECYCLE = "lifecycle";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +24,54 @@ public class DynamicLoadActivity extends FragmentActivity {
             ft.replace(R.id.flContainer, new DynamicLoadFragment());
             ft.commit();
         }
+
+        Log.d(LOG_TAG_LIFECYCLE, "activity: onCreate");
     }
 
+    /** added for demo lifecycle of the activity and fragment */
+    @Override
+    protected void onStart(){
+        super.onStart();
 
+        Log.d(LOG_TAG_LIFECYCLE, "activity: onStart");
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+
+        Log.d(LOG_TAG_LIFECYCLE, "activity: onRestart");
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        Log.d(LOG_TAG_LIFECYCLE, "activity: onResume");
+    }
+
+    @Override
+    protected void onPause(){
+        Log.d(LOG_TAG_LIFECYCLE, "activity: onPause");
+
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.d(LOG_TAG_LIFECYCLE, "activity: onStop");
+
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy(){
+        Log.d(LOG_TAG_LIFECYCLE, "activity: onDestroy");
+
+        super.onDestroy();
+    }
+
+    /** Menu */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
