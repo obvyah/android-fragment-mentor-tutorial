@@ -1,8 +1,8 @@
 package com.demofragment.demoapp.tabdemo;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
 import com.demofragment.demoapp.R;
 
-public class TabDemoActivity extends FragmentActivity {
+public class TabDemoActivity extends AppCompatActivity {
 
     public final String LOG_TAG_LIFECYCLE = "lifecycle";
 
