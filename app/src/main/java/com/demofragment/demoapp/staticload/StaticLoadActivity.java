@@ -1,13 +1,13 @@
 package com.demofragment.demoapp.staticload;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.demofragment.demoapp.R;
 
-public class StaticLoadActivity extends FragmentActivity {
+public class StaticLoadActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,33 +1,17 @@
 package com.demofragment.demoapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-
-import com.demofragment.demoapp.staticload.StaticLoadActivity;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button staticLoadButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        staticLoadButton = (Button) findViewById(R.id.staticLoadButton);
-        staticLoadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, StaticLoadActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
 

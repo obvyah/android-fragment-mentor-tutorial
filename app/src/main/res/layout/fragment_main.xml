@@ -16,6 +16,18 @@
             android:layout_height="60dp"
             android:text="@string/static_load_demo" />
 
+        <Button
+            android:id="@+id/dynamicLoadButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/dynamic_load_demo" />
+
+        <Button
+            android:id="@+id/tabDemoButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/tabs_demo" />
+
     </LinearLayout>
 
 </RelativeLayout>
