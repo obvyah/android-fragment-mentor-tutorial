@@ -10,13 +10,14 @@ import android.widget.Button;
 
 import com.demofragment.demoapp.dynamicload.DynamicLoadActivity;
 import com.demofragment.demoapp.staticload.StaticLoadActivity;
+import com.demofragment.demoapp.tabdemo.TabDemoActivity;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
 
-    Button staticLoadButton, dynamicLoadButton;
+    Button staticLoadButton, dynamicLoadButton, tabDemoButton;
 
     public MainActivityFragment() {
     }
@@ -30,6 +31,7 @@ public class MainActivityFragment extends Fragment {
         // init view
         staticLoadButton = (Button) root.findViewById(R.id.staticLoadButton);
         dynamicLoadButton = (Button) root.findViewById(R.id.dynamicLoadButton);
+        tabDemoButton = (Button) root.findViewById(R.id.tabDemoButton);
 
         // set listener
         setListener();
@@ -52,6 +54,15 @@ public class MainActivityFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), DynamicLoadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        tabDemoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), TabDemoActivity.class);
                 startActivity(intent);
             }
         });

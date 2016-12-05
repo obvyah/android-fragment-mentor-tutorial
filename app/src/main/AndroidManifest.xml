@@ -26,6 +26,12 @@
             android:name=".dynamicload.DynamicLoadActivity"
             android:label="@string/app_name" >
         </activity>
+
+        <activity
+            android:name=".tabdemo.TabDemoActivity"
+            android:label="@string/app_name" >
+        </activity>
+
     </application>
 
 </manifest>
