@@ -1,11 +1,12 @@
 package com.demofragment.demoapp.staticload;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.demofragment.demoapp.R;
+
+import android.support.v7.app.AppCompatActivity;
 
 public class StaticLoadActivity extends AppCompatActivity {
 
@@ -13,8 +14,6 @@ public class StaticLoadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_static_load);
-
-
     }
 
 

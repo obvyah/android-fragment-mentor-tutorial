@@ -7,4 +7,6 @@
     <string name="static_load_demo">Load fragments statically</string>
     <string name="dynamic_load_demo">Load fragments dynamically</string>
     <string name="tabs_demo">Load fragments with tabs</string>
+    <string name="communicate_with_activity">Communicate with activity</string>
+    <string name="click_me">click me!</string>
 </resources>
